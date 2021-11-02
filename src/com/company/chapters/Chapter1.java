@@ -36,8 +36,15 @@ public class Chapter1 {
             System.out.println("Enter an integer angle");
             if(in.hasNextInt()) {
                 int angleValue = in.nextInt();
-                System.out.println(angleValue%359);
-                System.out.println(Math.floorMod(angleValue, 359));
+
+                if (angleValue >= 0) {
+                    System.out.println(angleValue + " % 359 = " + angleValue % 359);
+                } else {
+                    int multiplier = (Math.abs(angleValue) / 359) + 1; //расширяет диапозон от -359 - +infinity (2147483647) -> -infinity (-2147483648) - + infinity
+                    System.out.println(angleValue + " % 359 = " + (angleValue + (359*multiplier)) % 359);
+                }
+
+                System.out.println("Math.floorMod(" + angleValue + ", 359) = " + Math.floorMod(angleValue, 359));
                 break;
             }
             in.nextLine();
