@@ -23,6 +23,15 @@ public class Main {
                         case CHAPTER_1_EX2:
                             Chapter1.injectionChecker();
                             break;
+                        case CHAPTER_1_EX3:
+                            Chapter1.maxNumOfThree();
+                            break;
+                        case CHAPTER_1_EX4:
+                            Chapter1.printSmallestAndLargestPositiveDoubleValues();
+                            break;
+                        case CHAPTER_1_EX6:
+                            System.out.println(Chapter1.bigIntegerFactorial(1000));
+                            break;
                     }
                     break;
                 }

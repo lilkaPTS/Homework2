@@ -1,5 +1,8 @@
 package com.company.chapters;
 
+import java.lang.reflect.Array;
+import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Chapter1 {
@@ -56,16 +59,48 @@ public class Chapter1 {
      * Using only the conditional operator, write a program that reads three
      * integers and prints the largest. Repeat with Math.max.
      */
+    public static void maxNumOfThree() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter three integer number");
+        int[] threeNum = new int[3];
+        for (int i = 0; i < threeNum.length; i++) {
+            while (true) {
+                System.out.print(i+1 + " - ");
+                if(in.hasNextInt()){
+                    threeNum[i] = in.nextInt();
+                    break;
+                }
+                in.nextLine();
+            }
+            in.nextLine();
+        }
+        System.out.println(Math.max(Math.max(threeNum[0],threeNum[1]), threeNum[2]));
+        in.close();
+    }
 
     /**
      * Write a program that prints the smallest and largest positive double values.
      * Hint: Look up Math.nextUp in the Java API.
      */
+    public static void printSmallestAndLargestPositiveDoubleValues() {
+        System.out.println(Math.nextUp(Double.MIN_VALUE));
+        System.out.println(Math.nextUp(Double.MAX_VALUE));
+    }
 
     /**
      * Write a program that computes the factorial n! = 1 × 2 × . . . × n, using
      * BigInteger. Compute the factorial of 1000.
      */
+    public static BigInteger bigIntegerFactorial(int num) {
+        if(num < 0) {
+            throw new IllegalArgumentException("The number must be positive");
+        }
+        BigInteger output = BigInteger.valueOf(1);
+        for (int i = 2; i <= num; i++){
+            output = output.multiply(BigInteger.valueOf(i));
+        }
+        return output;
+    }
 
     /**
      * Write a program that prints a lottery combination, picking six distinct
