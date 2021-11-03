@@ -1,8 +1,7 @@
 package com.company.chapters;
 
-import java.lang.reflect.Array;
 import java.math.BigInteger;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Chapter1 {
@@ -108,4 +107,17 @@ public class Chapter1 {
      * array list filled with 1...49. Pick a random index and remove the element.
      * Repeat six times. Print the result in sorted order.
      */
+    public static void printLotteryCombination() {
+        String lotteryCombination = "";
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i = 1; i <= 49; i++) {
+            arrayList.add(i);
+        }
+        for (int i = 0; i < 6; i++) {
+            int deleteIndex = (int)(Math.random() * arrayList.size());
+            lotteryCombination += arrayList.get(deleteIndex) + " ";
+            arrayList.remove(deleteIndex);
+        }
+        System.out.println(lotteryCombination);
+    }
 }

@@ -32,6 +32,9 @@ public class Main {
                         case CHAPTER_1_EX6:
                             System.out.println(Chapter1.bigIntegerFactorial(1000));
                             break;
+                        case CHAPTER_1_EX13:
+                            Chapter1.printLotteryCombination();
+                            break;
                     }
                     break;
                 }
