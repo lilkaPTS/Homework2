@@ -1,6 +1,7 @@
 package com.company.chapters.chapter2;
 
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 /**
  * Implement a class Car that models a car traveling along the x-axis, consuming
@@ -67,5 +68,28 @@ public class Car {
             throw new IllegalArgumentException("The amount of fuel cannot be negative");
         }
         fuelLevel+=fuelQuantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Car car = (Car) o;
+        return Double.compare(car.INITIAL_X, INITIAL_X) == 0 && Double.compare(car.x, x) == 0 && Double.compare(car.fuelLevel, fuelLevel) == 0 && Double.compare(car.fuelEfficiency, fuelEfficiency) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(INITIAL_X, x, fuelLevel, fuelEfficiency);
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "INITIAL_X=" + INITIAL_X +
+                ", x=" + x +
+                ", fuelLevel=" + fuelLevel +
+                ", fuelEfficiency=" + fuelEfficiency +
+                '}';
     }
 }
