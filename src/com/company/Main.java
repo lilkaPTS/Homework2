@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.chapters.Chapter1;
+import com.company.chapters.chapter2.Point;
 import com.company.enums.Exercises;
 
 import java.util.Arrays;
@@ -34,6 +35,10 @@ public class Main {
                             break;
                         case CHAPTER_1_EX13:
                             Chapter1.printLotteryCombination();
+                            break;
+                        case CHAPTER_2_EX5:
+                            Point point = new Point(3,4).translate(1,3).scale(0.5);
+                            System.out.println(point);
                             break;
                     }
                     break;

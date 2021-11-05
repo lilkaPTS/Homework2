@@ -8,5 +8,7 @@ public enum Exercises {
     CHAPTER_1_EX3,
     CHAPTER_1_EX4,
     CHAPTER_1_EX6,
-    CHAPTER_1_EX13
+    CHAPTER_1_EX13,
+    CHAPTER_2_EX5,
+    CHAPTER_2_EX9
 }
