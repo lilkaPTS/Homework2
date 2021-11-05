@@ -1,7 +1,5 @@
 package com.company.enums;
 
-import com.company.chapters.Chapter1;
-
 public enum Exercises {
     CHAPTER_1_EX1,
     CHAPTER_1_EX2,

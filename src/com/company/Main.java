@@ -1,6 +1,7 @@
 package com.company;
 
-import com.company.chapters.Chapter1;
+import com.company.chapters.chapter1.Chapter1;
+import com.company.chapters.chapter2.Car;
 import com.company.chapters.chapter2.Point;
 import com.company.enums.Exercises;
 
@@ -39,6 +40,15 @@ public class Main {
                         case CHAPTER_2_EX5:
                             Point point = new Point(3,4).translate(1,3).scale(0.5);
                             System.out.println(point);
+                            break;
+                        case CHAPTER_2_EX9:
+                            Car car = new Car(10,5,11.4);
+                            car.move(100);
+                            System.out.println(car.getDistance() + " " + car.getFuelLevel());
+                            car.refill(6.4);
+                            System.out.println(car.getDistance() + " " + car.getFuelLevel());
+                            car.move(100);
+                            System.out.println(car.getDistance() + " " + car.getFuelLevel());
                             break;
                     }
                     break;
