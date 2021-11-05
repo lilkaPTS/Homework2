@@ -3,6 +3,8 @@ package com.company;
 import com.company.chapters.chapter1.Chapter1;
 import com.company.chapters.chapter2.Car;
 import com.company.chapters.chapter2.Point;
+import com.company.chapters.chapter3.Employee;
+import com.company.chapters.chapter3.Measurable;
 import com.company.enums.Exercises;
 
 import java.util.Arrays;
@@ -49,6 +51,14 @@ public class Main {
                             System.out.println(car.getDistance() + " " + car.getFuelLevel());
                             car.move(100);
                             System.out.println(car.getDistance() + " " + car.getFuelLevel());
+                            break;
+                        case CHAPTER_3_EX1_AND_EX2:
+                            Employee emp1 = new Employee("Ilya", 333333);
+                            Employee emp2 = new Employee("Vasya", 222222);
+                            Employee emp3 = new Employee("Petya", 411111);
+                            Measurable[] arr = new Measurable[]{emp1, emp2, emp3};
+                            Arrays.asList(emp1, emp2, emp3).forEach(System.out::println);
+                            System.out.println("Average salary: " + Employee.average(arr) + "\nEmployee with largest salary: " + Employee.largest(arr));
                             break;
                     }
                     break;
