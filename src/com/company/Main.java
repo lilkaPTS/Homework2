@@ -5,6 +5,10 @@ import com.company.chapters.chapter2.Car;
 import com.company.chapters.chapter2.Point;
 import com.company.chapters.chapter3.Employee;
 import com.company.chapters.chapter3.Measurable;
+import com.company.chapters.chapter4.Circle;
+import com.company.chapters.chapter4.Line;
+import com.company.chapters.chapter4.Rectangle;
+import com.company.chapters.chapter4.Shape;
 import com.company.enums.Exercises;
 
 import java.util.Arrays;
@@ -59,6 +63,14 @@ public class Main {
                             Measurable[] arr = new Measurable[]{emp1, emp2, emp3};
                             Arrays.asList(emp1, emp2, emp3).forEach(System.out::println);
                             System.out.println("Average salary: " + Employee.average(arr) + "\nEmployee with largest salary: " + Employee.largest(arr));
+                            break;
+                        case CHAPTER_4_EX4_AND_EX5:
+                            Circle circle = new Circle(new Point(1,2), 5);
+                            Rectangle rectangle = new Rectangle(new Point(2,1),2,3);
+                            Line line = new Line(new Point(0,3), new Point(3,0));
+                            System.out.println(circle + " - " + circle.getCenter());
+                            System.out.println(rectangle + " - " + rectangle.getCenter());
+                            System.out.println(line + " - " + line.getCenter());
                             break;
                     }
                     break;

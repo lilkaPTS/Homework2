@@ -53,6 +53,18 @@ public class Point {
         return new Point(this.x*multiplier, this.y*multiplier);
     }
 
+    public double distance(double x, double y) {
+        return Math.sqrt(Math.pow(x-this.x, 2) + Math.pow(y-this.y, 2));
+    }
+
+    public double distance(Point point){
+        return distance(point.getX(), point.getY());
+    }
+
+    public void moveBy (double dx, double dy) {
+        translate(dx,dy);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,4 +85,5 @@ public class Point {
                 ", y=" + y +
                 '}';
     }
+
 }
