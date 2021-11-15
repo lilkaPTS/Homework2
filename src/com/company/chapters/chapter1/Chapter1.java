@@ -101,6 +101,17 @@ public class Chapter1 {
         return output;
     }
 
+    public static BigInteger bigIntegerFactorialV2(BigInteger num) {
+        if(num.intValue() < 0) {
+            throw new IllegalArgumentException("The number must be positive");
+        }
+        if(num.intValue() == 0 || num.intValue() == 1){
+            return BigInteger.ONE;
+        } else {
+            return num.multiply(bigIntegerFactorialV2(num.subtract(BigInteger.ONE)));
+        }
+    }
+
     /**
      * Write a program that prints a lottery combination, picking six distinct
      * numbers between 1 and 49. To pick six distinct numbers, start with an
