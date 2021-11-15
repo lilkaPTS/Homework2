@@ -2,7 +2,7 @@ package com.company.chapters.chapter4;
 
 import com.company.chapters.chapter2.Point;
 
-public class Circle extends Shape{
+public class Circle extends Shape {
     private Point center;
     private double radius;
 
@@ -23,5 +23,4 @@ public class Circle extends Shape{
                 ", radius=" + radius +
                 '}';
     }
-
 }

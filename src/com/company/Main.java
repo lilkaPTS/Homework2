@@ -11,6 +11,7 @@ import com.company.chapters.chapter4.Rectangle;
 import com.company.chapters.chapter4.Shape;
 import com.company.enums.Exercises;
 
+import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -38,7 +39,14 @@ public class Main {
                             Chapter1.printSmallestAndLargestPositiveDoubleValues();
                             break;
                         case CHAPTER_1_EX6:
-                            System.out.println(Chapter1.bigIntegerFactorial(1000));
+                            System.out.println("Factorial version 1:");
+                            System.out.println("0! = " + Chapter1.bigIntegerFactorial(0));
+                            System.out.println("1! = " + Chapter1.bigIntegerFactorial(1));
+                            System.out.println("1000! = " + Chapter1.bigIntegerFactorial(1000));
+                            System.out.println("Factorial version 2:");
+                            System.out.println("0! = " + Chapter1.bigIntegerFactorialV2(BigInteger.valueOf(0)));
+                            System.out.println("1! = " + Chapter1.bigIntegerFactorialV2(BigInteger.valueOf(1)));
+                            System.out.println("1000! = " + Chapter1.bigIntegerFactorialV2(BigInteger.valueOf(1000)));
                             break;
                         case CHAPTER_1_EX13:
                             Chapter1.printLotteryCombination();
