@@ -12,7 +12,7 @@ import java.util.Objects;
  * largest(Measurable[] objects). Use it to find the name of the employee with
  * the largest salary. Why do you need a cast?
  */
-public class Employee implements Measurable{
+public class Employee implements Measurable {
 
     private String name;
     private double salary;
@@ -70,7 +70,7 @@ public class Employee implements Measurable{
 
     @Override
     public double getMeasure() {
-        return 0;
+        return salary;
     }
 
     @Override
